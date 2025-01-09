@@ -16,18 +16,18 @@ namespace jl{
     bool m_check=true; /**needed to check if a place is free */
     public:
     /**
-	* \brief Default constructor
-	* 
-	* Creates a object with the default name and password.
-	*/
+     * \brief Default constructor
+     * 
+     * Creates a object with the default name and password.
+     */
     Client():User(){};
      /**
-		 * \brief Parametric constructor.
-		 * 
-		 * Creates a object using the given name and password.
-         * \param name variable that stores the name
-         * \param password variable that stores the password
-         */
+      * \brief Parametric constructor.
+      * 
+      * Creates a object using the given name and password.
+      * \param name variable that stores the name
+      * \param password variable that stores the password
+      */
     Client(std::string name,std::string password) : User(name,password){};
     /**
      * \brief Sets the name of the object
