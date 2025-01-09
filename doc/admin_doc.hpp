@@ -14,16 +14,16 @@ namespace jl{
     std::string m_name; /**admin name */
     std::string m_password; /**admin password */
     public:
-	/**
-	* \brief Default constructor
-	* 
-	* Creates a object with the default name and password.
-	*/
+    /**
+     * \brief Default constructor
+     * 
+     * Creates a object with the default name and password.
+     */
     Admin():User(){};
     /**
-	 * \brief Parametric constructor.
-	 * 
-	 * Creates a object using the given name and password.
+     * \brief Parametric constructor.
+     * 
+     * Creates a object using the given name and password.
      * \param name variable that stores the name
      * \param password variable that stores the password
      */
