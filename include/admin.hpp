@@ -77,16 +77,7 @@ namespace jl{
     }
     file.close();
     }
-    /**
-     * \brief pozwala dodać film administartorowi 
-     * 
-     * Pobiera od administratora potrzebne dane 
-     * następnie wrzuca obiekt na koniec wektora 
-     * klasy Movie. Otwiera plik i zapisuje dane po 
-     * przecinku 
-     * \param movies jest to wektor klasy Movie która 
-     * zapisuje dane o filmach 
-     */
+   
     void addMovie(std::vector<Movie>movies){
     std::string title,author,film_genre,time;
     int room{};
@@ -140,14 +131,7 @@ namespace jl{
     file.close();
     
 } 
-    /**
-     * \brief Pozawa usunąć film administratorowi
-     * 
-     * Otwiera plik i zapisuje linie do wektora lines
-     * prosi użytkownika o podanie filmu który chce usunąć
-     * następnie usuwa wybraną linie oraz zapisuje plik na
-     * nowo 
-     */
+   
     void deleteMovie(){
     int lineNumber;
     std::vector<std::string> lines;
@@ -167,7 +151,7 @@ namespace jl{
         std::cerr << "Wrong number " << lineNumber << std::endl;
         return;
     }
-     lines.erase(lines.begin() + (lineNumber - 1));// co robi erase 
+     lines.erase(lines.begin() + (lineNumber - 1));
 
     std::ofstream outputFile("Movies.txt");
     if (!outputFile.is_open()) {
@@ -181,17 +165,7 @@ namespace jl{
 
     outputFile.close();
     }   
-    /**
-     * \brief Pozwala zresetować salę danego filmu
-     * 
-     * Robi tak że cała sala jest znów dostępna i 
-     * wszystkie miejsca są wolne 
-     * 
-     * \param matrix jest to macierz w której zapisane są 
-     * miejsca siedzące 
-     * \param f jest to nazwa pliku w którym zapisane 
-     * są miejsca siedziące 
-     */
+    
     void reset(std::vector<std::vector<int>>&matrix,std::string f){
     for(int i=0;i<5;i++){
     for(int j=0;j<5;j++){
